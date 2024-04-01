@@ -318,9 +318,9 @@ public class VideoInviteActivity extends AppCompatActivity {
         @Override
         public void onReceive(Context context, Intent intent) {
             String action = intent.getAction();
-            if (action.equals(ACTION_REGISTRATION)) {
+            if (ACTION_REGISTRATION.equals(action)) {
                 handleRegistration(intent);
-            } else if (action.equals(ACTION_VIDEO_NOTIFICATION)) {
+            } else if (ACTION_VIDEO_NOTIFICATION.equals(action)) {
                 handleVideoNotificationIntent(intent);
             }
         }
