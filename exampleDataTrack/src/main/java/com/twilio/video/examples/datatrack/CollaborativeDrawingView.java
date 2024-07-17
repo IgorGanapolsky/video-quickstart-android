@@ -15,6 +15,7 @@ import android.view.MotionEvent;
 import android.view.View;
 
 import com.twilio.video.RemoteParticipant;
+import java.security.SecureRandom;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -265,7 +266,7 @@ public class CollaborativeDrawingView extends View {
      * Returns a random color.
      */
     private int getRandomColor() {
-        Random rnd = new Random();
+        Random rnd = new SecureRandom();
 
         return Color.argb(255, rnd.nextInt(256), rnd.nextInt(256), rnd.nextInt(256));
     }
